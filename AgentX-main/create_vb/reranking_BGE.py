@@ -29,7 +29,7 @@ EMBED_MODEL = "all-mpnet-base-v2"  # 768-dimensional embeddings
 VECTOR_DIM = 768
 TOP_K = 5
 
-PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "pcsk_4Ndnwt_6wZ5exov2n7isQMJLnGtSFmFwidxmAuzc6nzKAAdabWV1zyScDTK59vV8krjF3F")
+PINECONE_API_KEY = os.getenv("PINECONE_API_KEY", "")
 PINECONE_ENV = "us-east-1"
 INDEX_NAME = "financial-knowledge"
 

@@ -1,0 +1,36 @@
+question,predicted_task_type,Actual_task_type
+what is stock price of tata motor today?,general_qa,general_qa
+waht is best age to buy a house?,general_qa,general_qa
+now store this in a pdf.,budget_planning,general_qa
+"""I am leaving in the Newyork, I am earning 10000 dollar per week, give me the budget palnner in pdf format.""",budget_planning,budget_planning
+conda activate karan,budget_planning,general_qa
+what is live gold rate?,general_qa,general_qa
+I have an extra $500 this month. Should I spend it on a new TV or invest it?,savings_optimization,savings_optimization
+"Outline a 5-step plan for a couple to save for a $50,000 down payment on a house in 3 years.",savings_optimization,savings_optimization
+Give me guidance on opening a brokerage account for international stocks.,general_qa,general_qa
+conda activate karan,budget_planning,general_qa
+"Create a budget for a single person with a monthly net income of $4,000 and $500 in credit card debt.",budget_planning,budget_planning
+I'm 40 years old with Rs 20 lakhs to invest. What's my risk profile? Send me the report to my email.,risk_profiling,risk_profiling
+"Create a budget for a high-income earner with a net monthly income of $15,000. They want to aggressively save and keep essentials under 30%.",budget_planning,budget_planning
+"Create a budget for a single person with a monthly net income of $4,000 and $500 in credit card debt.",budget_planning,budget_planning
+"Age: 65; Investment Goal: 2 years (Preservation); Risk Tolerance: $500 loss on $10,000 portfolio (Very Low).",savings_optimization,risk_profiling
+"Age: 65; Investment Goal: 2 years (Preservation); Risk Tolerance: $500 loss on $10,000 portfolio (Very Low),caluclate risk profile",risk_profiling,risk_profiling
+"Age: 65; Investment Goal: 2 years (Preservation); Risk Tolerance: $500 loss on $10,000 portfolio (Very Low),caluclate risk profile",risk_profiling,risk_profiling
+"Age: 65; Investment Goal: 2 years (Preservation); Risk Tolerance: $500 loss on $10,000 portfolio (Very Low),caluclate risk profile using risk profile agent",risk_profiling,risk_profiling
+my salary is 10000,general_qa,budget_planning
+what is my salary,general_qa,general_qa
+give me monthly budget plan. my monthly income is 50K,budget_planning,budget_planning
+what is chit fund,general_qa,general_qa
+what is stock,general_qa,general_qa
+"I earn Rs 1,00,000 per month and want to create a detailed budget. Please send me a PDF",budget_planning,budget_planning
+"my monthly income is 50000. send me detaild budget plan in my email. ""karan.p@research.iiit.ac.in""",budget_planning,budget_planning
+My favorite color is blue.,budget_planning,general_qa
+what is my favourite color,general_qa,general_qa
+my salary is 10000 do budget planning,budget_planning,budget_planning
+my salary is 10K do budget planning,budget_planning,budget_planning
+what is my salary,general_qa,general_qa
+what is loan,general_qa,general_qa
+my salary is 1000000 give my budget planner in form of pdf,budget_planning,budget_planning
+my salary is 100000 give my budget planning in pdf,budget_planning,budget_planning
+"my monthly income is 50000. send me detaild budget plan in my email. ""karan.p@research.iiit.ac.in""",budget_planning,budget_planning
+"my monthly income is 50000. send me detaild budget plan in my email. ""karanpadariya96@gmail.com""",budget_planning,budget_planning

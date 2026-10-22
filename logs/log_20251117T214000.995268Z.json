@@ -1,0 +1,98 @@
+{
+  "run_id": "20251117T213945.745423Z",
+  "timestamp": "2025-11-17T21:39:45.745477",
+  "original_query": "what is my salary",
+  "user_id": "default_user",
+  "pipeline": [
+    {
+      "step": "task_detection",
+      "input": "what is my salary",
+      "output": {
+        "task_type": "general_qa",
+        "enhanced_query": "What is my salary?",
+        "tools_needed": [],
+        "apis_needed": [],
+        "actions": [],
+        "metadata": {
+          "method": "dragonllm_structured",
+          "confidence": 1.0,
+          "raw_response": " {\n            \"enhanced_query\": \"What is my salary?\",\n            \"task_type\": \"General Q&A\",\n            \"tools_needed\": [],\n            \"apis_needed\": [],\n            \"actions\": [],\n            \"confidence\": 100\n        }",
+          "fallback": false,
+          "raw_parsed": {
+            "enhanced_query": "What is my salary?",
+            "task_type": "General Q&A",
+            "tools_needed": [],
+            "apis_needed": [],
+            "actions": [],
+            "confidence": 100
+          }
+        }
+      }
+    },
+    {
+      "step": "pre_api_calls",
+      "requested": [],
+      "output": {}
+    },
+    {
+      "step": "rag_retrieval",
+      "input_query": "What is my salary?",
+      "output": [
+        {
+          "id": "Principles-of-Financial-Accounting.pdf_p211_13171_seg1_size128_chunk2",
+          "source": "N/A",
+          "snippet": "a salary is typically an amount an employee earns annually, such as $52,000 per year. a wage is typically an amount an employee earns hourly, such as $10 per hour. the hourly rate is then multiplied by the number of hours in the pay period to determine total earnings for that period. a pay period is the span of time that is included in each paycheck that an employee receives. typical pay periods are weekly, bi-weekly, semi-monthly, and monthly. gross pay is the amount that an employee earns in a",
+          "rerank_score": 1.7255859375
+        },
+        {
+          "id": "web_0",
+          "source": "https://www.investopedia.com/personal-finance/how-much-income-puts-you-top-1-5-10/",
+          "snippet": "Individuals in the top 10% earn at least six figures annually. In some areas, those in the top 1% must make over $1 million per year, while in others, the ...",
+          "rerank_score": null
+        },
+        {
+          "id": "web_1",
+          "source": "https://www.financealliance.io/how-much-should-you-be-earning/",
+          "snippet": "Uncover the truth about what your finance peers are earning and see how your salary measures up with the Finance Alliance Salary Report 2025!",
+          "rerank_score": null
+        },
+        {
+          "id": "web_2",
+          "source": "https://corporatefinanceinstitute.com/resources/accounting/annual-income/",
+          "snippet": "Total annual income is the sum of all income sources. To convert monthly income to annual, multiply by 12. To convert hourly, multiply by 2000.",
+          "rerank_score": null
+        }
+      ]
+    },
+    {
+      "step": "expert_handler_call",
+      "handler": "qa_handler",
+      "handler_result_preview": "{'answer': 'As a professional financial advisor, I can help you understand financial concepts and provide guidance, but I do not have access to your personal financial information, including your specific salary. My role is to offer general advice and insights.\\n\\n**What is Your Salary?**\\n\\nTo determine your exact salary, you would need to refer to your personal financial documents. Here\\'s how you can typically find this information:\\n\\n1.  **Employment Contract or Offer Letter:** Your initial employment agreement should clearly state your annual salary.\\n2.  **Pay Stubs/Payrolls:** Each pay stub you receive will show your gross pay for that period. If you are salaried, it will often indicate your annual salary or a breakdown that allows you to calculate it (e.g., monthly gross pay multiplied by 12).\\n3.  **HR Department or Employer:** Your Human Resources department or your direct employer can provide you with official documentation of your current salary.\\n4.  **Bank Statements (Indirectly):** While bank statements show net deposits, they can help you track your regular income, but they won\\'t directly state your gross salary or deductions.\\n\\n**Reasoning and Financial Principles:**\\n\\nUnderstanding your precise salary is a fundamental principle of personal finance for several critical reasons:\\n\\n*   **Budgeting and Financial Planning:** Your salary is the cornerstone of your income. Knowing this exact figure allows you to create an accurate budget, allocate funds for ex"
+    },
+    {
+      "step": "verification",
+      "iterations": [
+        {
+          "iteration": 1,
+          "has_issues": false,
+          "issues": []
+        }
+      ],
+      "final_answer_preview": "As a professional financial advisor, I can help you understand financial concepts and provide guidance, but I do not have access to your personal financial information, including your specific salary. My role is to offer general advice and insights.\n\n**What is Your Salary?**\n\nTo determine your exact salary, you would need to refer to your personal financial documents. Here's how you can typically find this information:\n\n1.  **Employment Contract or Offer Letter:** Your initial employment agreement should clearly state your annual salary.\n2.  **Pay Stubs/Payrolls:** Each pay stub you receive will show your gross pay for that period. If you are salaried, it will often indicate your annual salary or a breakdown that allows you to calculate it (e.g., monthly gross pay multiplied by 12).\n3.  **HR Department or Employer:** Your Human Resources department or your direct employer can provide you with official documentation of your current salary.\n4.  **Bank Statements (Indirectly):** While ban",
+      "specialists_used": [],
+      "accepted": true
+    },
+    {
+      "step": "action_execution",
+      "requested_actions": [],
+      "executed": [],
+      "results": {}
+    }
+  ],
+  "final": {
+    "answer_preview": "As a professional financial advisor, I can help you understand financial concepts and provide guidance, but I do not have access to your personal financial information, including your specific salary. My role is to offer general advice and insights.\n\n**What is Your Salary?**\n\nTo determine your exact salary, you would need to refer to your personal financial documents. Here's how you can typically find this information:\n\n1.  **Employment Contract or Offer Letter:** Your initial employment agreement should clearly state your annual salary.\n2.  **Pay Stubs/Payrolls:** Each pay stub you receive will show your gross pay for that period. If you are salaried, it will often indicate your annual salary or a breakdown that allows you to calculate it (e.g., monthly gross pay multiplied by 12).\n3.  **HR Department or Employer:** Your Human Resources department or your direct employer can provide you with official documentation of your current salary.\n4.  **Bank Statements (Indirectly):** While bank statements show net deposits, they can help you track your regular income, but they won't directly state your gross salary or deductions.\n\n**Reasoning and Financial Principles:**\n\nUnderstanding your precise salary is a fundamental principle of personal finance for several critical reasons:\n\n*   **Budgeting and Financial Planning:** Your salary is the cornerstone of your income. Knowing this exact figure allows you to create an accurate budget, allocate funds for expenses, savings, and investments, and plan for future financial goals.\n*   **Tax Planning:** Your gross salary is the basis for calculating your income tax obligations. Understanding it helps you anticipate your tax burden and plan for deductions or credits.\n*   **Debt Management:** Your income dictates your capacity to take on and repay debt. Knowing your salary helps you make informed decisions about loans, mortgages, and credit.\n*   **Negotiation and Career Advancement:** When considering new job opportunities or negotia",
+    "accepted": true,
+    "specialists_used": [],
+    "action_results": {}
+  }
+}

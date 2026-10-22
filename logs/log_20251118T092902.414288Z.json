@@ -1,0 +1,119 @@
+{
+  "run_id": "20251118T092703.260730Z",
+  "timestamp": "2025-11-18T09:27:03.260817",
+  "original_query": "my salary is 1000000 give my budget planner in form of pdf",
+  "user_id": "default_user",
+  "pipeline": [
+    {
+      "step": "task_detection",
+      "input": "my salary is 1000000 give my budget planner in form of pdf",
+      "output": {
+        "task_type": "budget_planning",
+        "enhanced_query": "Please provide a detailed and well-formatted PDF report on my budget planning. Include tables if useful.",
+        "tools_needed": [
+          "generate_pdf_anvil"
+        ],
+        "apis_needed": [],
+        "actions": [
+          "generate_pdf"
+        ],
+        "metadata": {
+          "method": "dragonllm_structured",
+          "confidence": 1.0,
+          "raw_response": " {\n            \"enhanced_query\": \"Please provide a detailed and well-formatted PDF report on my budget planning. Include tables if useful.\",\n            \"task_type\": \"Budget Planning\",\n            \"tools_needed\": [\"generate_pdf_anvil\"],\n            \"apis_needed\": [],\n            \"actions\": [\"generate_pdf\"],\n            \"confidence\": 100\n        }",
+          "fallback": false,
+          "raw_parsed": {
+            "enhanced_query": "Please provide a detailed and well-formatted PDF report on my budget planning. Include tables if useful.",
+            "task_type": "Budget Planning",
+            "tools_needed": [
+              "generate_pdf_anvil"
+            ],
+            "apis_needed": [],
+            "actions": [
+              "generate_pdf"
+            ],
+            "confidence": 100
+          }
+        }
+      }
+    },
+    {
+      "step": "pre_api_calls",
+      "requested": [],
+      "output": {}
+    },
+    {
+      "step": "rag_retrieval",
+      "input_query": "Please provide a detailed and well-formatted PDF report on my budget planning. Include tables if useful.",
+      "output": [
+        {
+          "id": "web_0",
+          "source": "https://scholarworks.waldenu.edu/cgi/viewcontent.cgi?article=4708&context=dissertations",
+          "snippet": "Budget planning involves the use of budgets to develop financial forecasts, which can include cash budgets, sales budgets, operational budgets, capital ...",
+          "rerank_score": null
+        },
+        {
+          "id": "web_1",
+          "source": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11219134/",
+          "snippet": "Here, we present a systematic approach to budget planning and management for clinicians, be they chairs, chairs-to-be, faculty, or private ...",
+          "rerank_score": null
+        },
+        {
+          "id": "web_2",
+          "source": "https://online.hbs.edu/blog/post/importance-of-budgeting-in-business",
+          "snippet": "Budgeting is a key skill for ensuring organizations and teams have the resources to execute initiatives and reach goals.",
+          "rerank_score": null
+        }
+      ]
+    },
+    {
+      "step": "expert_handler_call",
+      "handler": "budget_handler",
+      "handler_result_preview": "{'answer': '## \ud83d\udcb0 Monthly Budget Plan: $5,000\\n\\n*   **Essentials:** $2,200 (Rationale: Covering fundamental living costs for stability.)\\n    *   Housing: $1,500\\n    *   Food: $500\\n    *   Utilities: $200\\n*   **Savings:** $1,000 (Rationale: Building a robust financial safety net and future wealth.)\\n*   **Debt Repayment:** $500 (Rationale: Systematically reducing outstanding liabilities to improve financial health.)\\n*   **Insurance/Safety:** $300 (Rationale: Protecting against unforeseen events and securing future well-being.)\\n*   **Discretionary:** $1,000 (Rationale: Allowing for personal enjoyment and flexible spending within limits.)\\n---\\n**Total Allocated:** $5,000', 'query': 'Please provide a detailed and well-formatted PDF report on my budget planning. Include tables if useful.', 'timestamp': '2025-11-18T14:58:11.042627', 'task_type': 'budget_planning', 'html_path': './logs/reports/budget_20251118T092811/report.html', 'image_paths': {}, 'pdf_path': None}"
+    },
+    {
+      "step": "verification",
+      "iterations": [
+        {
+          "iteration": 1,
+          "has_issues": true,
+          "issues": [
+            "Answer doesn't fully resolve user query"
+          ],
+          "applied_fix": "Expanded incomplete answer",
+          "answer_preview_after": "## \ud83d\udcb0 Monthly Budget Plan: $5,000\n\n*   **Essentials:** $2,200 (Rationale: Covering fundamental living costs for stability.)\n    *   Housing: $1,500\n    *   Food: $500\n    *   Utilities: $200\n*   **Savings:** $1,000 (Rationale: Building a robust financial safety net and future wealth.)\n*   **Debt Repayment:** $500 (Rationale: Systematically reducing outstanding liabilities to improve financial health.)\n*   **Insurance/Safety:** $300 (Rationale: Protecting against unforeseen events and securing fut",
+          "specialist_confidence": 0.75
+        }
+      ],
+      "final_answer_preview": "## \ud83d\udcb0 Monthly Budget Plan: $5,000\n\n*   **Essentials:** $2,200 (Rationale: Covering fundamental living costs for stability.)\n    *   Housing: $1,500\n    *   Food: $500\n    *   Utilities: $200\n*   **Savings:** $1,000 (Rationale: Building a robust financial safety net and future wealth.)\n*   **Debt Repayment:** $500 (Rationale: Systematically reducing outstanding liabilities to improve financial health.)\n*   **Insurance/Safety:** $300 (Rationale: Protecting against unforeseen events and securing future well-being.)\n*   **Discretionary:** $1,000 (Rationale: Allowing for personal enjoyment and flexible spending within limits.)\n---\n**Total Allocated:** $5,000",
+      "specialists_used": [
+        "CompletionSpecialist"
+      ],
+      "accepted": true
+    },
+    {
+      "step": "action_execution",
+      "requested_actions": [
+        "generate_pdf"
+      ],
+      "executed": [],
+      "results": {
+        "generate_pdf": {
+          "error": "PDF tool failed"
+        }
+      }
+    }
+  ],
+  "final": {
+    "answer_preview": "## \ud83d\udcb0 Monthly Budget Plan: $5,000\n\n*   **Essentials:** $2,200 (Rationale: Covering fundamental living costs for stability.)\n    *   Housing: $1,500\n    *   Food: $500\n    *   Utilities: $200\n*   **Savings:** $1,000 (Rationale: Building a robust financial safety net and future wealth.)\n*   **Debt Repayment:** $500 (Rationale: Systematically reducing outstanding liabilities to improve financial health.)\n*   **Insurance/Safety:** $300 (Rationale: Protecting against unforeseen events and securing future well-being.)\n*   **Discretionary:** $1,000 (Rationale: Allowing for personal enjoyment and flexible spending within limits.)\n---\n**Total Allocated:** $5,000",
+    "accepted": true,
+    "specialists_used": [
+      "CompletionSpecialist"
+    ],
+    "action_results": {
+      "generate_pdf": {
+        "error": "PDF tool failed"
+      }
+    }
+  }
+}

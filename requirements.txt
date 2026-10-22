@@ -1,0 +1,88 @@
+# ============================================================================
+# REQUIREMENTS.txt
+# All dependencies for Financial AI Agent
+# ============================================================================
+
+# Core Language Model Libraries
+langchain==0.1.0
+langchain-google-genai==0.0.10
+langchain-community==0.0.10
+
+# LLM Models
+transformers==4.35.0
+torch>=2.0.0
+ollama>=0.0.40
+
+# Embeddings
+sentence-transformers==2.2.2
+FlagEmbedding==1.2.8
+
+# Vector Database
+pinecone-client==2.2.2
+
+# Information Retrieval
+rank-bm25==0.2.2
+nltk==3.8.1
+
+# Data Processing
+numpy>=1.24.0
+pandas>=2.0.0
+scikit-learn>=1.3.0
+
+# Async Support
+asyncio-contextmanager>=1.0.0
+aiohttp>=3.8.0
+
+# Document Processing
+python-docx>=0.8.11
+reportlab>=4.0.0
+PyPDF2>=3.0.0
+
+# Utilities
+pydantic>=2.0.0
+python-dotenv>=1.0.0
+requests>=2.31.0
+
+# Testing & Development
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+flake8>=6.0.0
+mypy>=1.5.0
+
+# Optional: For better performance
+faiss-cpu>=1.7.0  # CPU version
+# faiss-gpu>=1.7.0  # GPU version (uncomment if GPU available)
+
+# Optional: Web server (if deploying as API)
+fastapi>=0.103.0
+uvicorn>=0.23.0
+pydantic-settings>=2.0.0
+
+# Logging & Monitoring
+python-logging-loki>=0.3.2  # Optional: for Loki logging
+
+# ============================================================================
+# INSTALLATION INSTRUCTIONS
+# ============================================================================
+# 
+# 1. Create virtual environment:
+#    python -m venv venv
+#    source venv/bin/activate  # On Windows: venv\Scripts\activate
+#
+# 2. Install requirements:
+#    pip install -r requirements.txt
+#
+# 3. Download NLTK data:
+#    python -m nltk.downloader punkt stopwords
+#
+# 4. Configure API keys:
+#    - Edit config.py with your API keys
+#    - Or set environment variables:
+#      export GOOGLE_API_KEY="your-key"
+#      export PINECONE_API_KEY="your-key"
+#
+# 5. Run the agent:
+#    python main.py --test
+#
+# ============================================================================

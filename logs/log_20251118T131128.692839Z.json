@@ -1,0 +1,91 @@
+{
+  "run_id": "20251118T130957.856540Z",
+  "timestamp": "2025-11-18T13:09:57.856612",
+  "original_query": "my salary is 47000 rupees, give me buget.",
+  "user_id": "default_user",
+  "pipeline": [
+    {
+      "step": "task_detection",
+      "input": "my salary is 47000 rupees, give me buget.",
+      "output": {
+        "task_type": "budget_planning",
+        "enhanced_query": "Please provide a detailed and well-formatted budget plan for my salary of 47000 rupees.",
+        "tools_needed": [
+          "budgeting_tool"
+        ],
+        "apis_needed": [],
+        "actions": [
+          "generate_pdf"
+        ],
+        "metadata": {
+          "method": "dragonllm_structured",
+          "confidence": 0.9,
+          "raw_response": " {\n            \"enhanced_query\": \"Please provide a detailed and well-formatted budget plan for my salary of 47000 rupees.\",\n            \"task_type\": \"Budget Planning\",\n            \"tools_needed\": [\"budgeting_tool\"],\n            \"apis_needed\": [],\n            \"actions\": [\"generate_pdf\"],\n            \"confidence\": 90\n        }",
+          "fallback": false,
+          "raw_parsed": {
+            "enhanced_query": "Please provide a detailed and well-formatted budget plan for my salary of 47000 rupees.",
+            "task_type": "Budget Planning",
+            "tools_needed": [
+              "budgeting_tool"
+            ],
+            "apis_needed": [],
+            "actions": [
+              "generate_pdf"
+            ],
+            "confidence": 90
+          }
+        }
+      }
+    },
+    {
+      "step": "pre_api_calls",
+      "requested": [],
+      "output": {}
+    },
+    {
+      "step": "rag_retrieval",
+      "input_query": "Please provide a detailed and well-formatted budget plan for my salary of 47000 rupees.",
+      "output": []
+    },
+    {
+      "step": "expert_handler_call",
+      "handler": "budget_handler",
+      "handler_result_preview": "{'answer': '## \ud83d\udcb0 Monthly Budget Plan: 47000 rupees\\n\\n*   **Essentials:** 23500 (Rationale: Covers fundamental living costs including shelter, sustenance, and basic services.)\\n    *   Housing: 13000\\n    *   Food: 6000\\n    *   Utilities: 4500\\n*   **Savings:** 9400 (Rationale: Builds financial security and provides for future goals like investments or emergencies, meeting the 20% minimum.)\\n*   **Debt Repayment:** 5000 (Rationale: Prioritizes reducing outstanding liabilities to improve financial health.)\\n*   **Insurance/Safety:** 2500 (Rationale: Provides a safety net for unforeseen events and protects assets.)\\n*   **Discretionary:** 6600 (Rationale: Allocates funds for personal wants, entertainment, hobbies, and other non-essential spending.)\\n---\\n**Total Allocated:** 47000', 'query': 'Please provide a detailed and well-formatted budget plan for my salary of 47000 rupees.', 'timestamp': '2025-11-18T18:41:06.069525', 'task_type': 'budget_planning'}"
+    },
+    {
+      "step": "verification",
+      "iterations": [
+        {
+          "iteration": 1,
+          "has_issues": false,
+          "issues": []
+        }
+      ],
+      "final_answer_preview": "## \ud83d\udcb0 Monthly Budget Plan: 47000 rupees\n\n*   **Essentials:** 23500 (Rationale: Covers fundamental living costs including shelter, sustenance, and basic services.)\n    *   Housing: 13000\n    *   Food: 6000\n    *   Utilities: 4500\n*   **Savings:** 9400 (Rationale: Builds financial security and provides for future goals like investments or emergencies, meeting the 20% minimum.)\n*   **Debt Repayment:** 5000 (Rationale: Prioritizes reducing outstanding liabilities to improve financial health.)\n*   **Insurance/Safety:** 2500 (Rationale: Provides a safety net for unforeseen events and protects assets.)\n*   **Discretionary:** 6600 (Rationale: Allocates funds for personal wants, entertainment, hobbies, and other non-essential spending.)\n---\n**Total Allocated:** 47000",
+      "specialists_used": [],
+      "accepted": true
+    },
+    {
+      "step": "action_execution",
+      "requested_actions": [
+        "generate_pdf"
+      ],
+      "executed": [],
+      "results": {
+        "generate_pdf": {
+          "error": "PDF tool failed"
+        }
+      }
+    }
+  ],
+  "final": {
+    "answer_preview": "## \ud83d\udcb0 Monthly Budget Plan: 47000 rupees\n\n*   **Essentials:** 23500 (Rationale: Covers fundamental living costs including shelter, sustenance, and basic services.)\n    *   Housing: 13000\n    *   Food: 6000\n    *   Utilities: 4500\n*   **Savings:** 9400 (Rationale: Builds financial security and provides for future goals like investments or emergencies, meeting the 20% minimum.)\n*   **Debt Repayment:** 5000 (Rationale: Prioritizes reducing outstanding liabilities to improve financial health.)\n*   **Insurance/Safety:** 2500 (Rationale: Provides a safety net for unforeseen events and protects assets.)\n*   **Discretionary:** 6600 (Rationale: Allocates funds for personal wants, entertainment, hobbies, and other non-essential spending.)\n---\n**Total Allocated:** 47000",
+    "accepted": true,
+    "specialists_used": [],
+    "action_results": {
+      "generate_pdf": {
+        "error": "PDF tool failed"
+      }
+    }
+  }
+}
